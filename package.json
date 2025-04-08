@@ -1,0 +1,38 @@
+{
+  "name": "markdown-to-html",
+  "version": "0.1.0",
+  "description": "A Model Context Protocol server",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "markdown-to-html": "./build/index.js"
+  },
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "start": "node build/index.js",
+    "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
+    "prepare": "npm run build",
+    "inspector": "npx @modelcontextprotocol/inspector build/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/inspector": "^0.8.1",
+    "@modelcontextprotocol/sdk": "^1.8.0",
+    "clean": "^4.0.2",
+    "dompurify": "^3.0.6",
+    "dotenv": "^16.4.7",
+    "es-toolkit": "^1.6.0",
+    "highlight.js": "^11.9.0",
+    "marked": "^9.1.5",
+    "react": "^18.2.0",
+    "rxjs": "^7.8.2"
+  },
+  "devDependencies": {
+    "@types/dompurify": "^3.0.5",
+    "@types/marked": "^5.0.2",
+    "@types/node": "^20.11.24",
+    "@types/react": "^18.2.55",
+    "typescript": "^5.3.3"
+  }
+}
