@@ -20,11 +20,6 @@ Build the server:
 npm run build
 ```
 
-For development with auto-rebuild:
-```bash
-npm run watch
-```
-
 ## Installation
 
 To use with Claude Desktop, add the server config:
